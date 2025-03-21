@@ -3,11 +3,11 @@ import { getHashFromClearText } from "../utils/crypto.js";
 
 
 export default function addRouteHandlers(app){
-    app.get("/", async (request, reply) => {
+    app.get("/", async (requestAnimationFrame, reply) => {
         return { hello: "world" };
     });
 
-    app.post("/signup", async (request, reply) => {
+    app.post("/api/users", async (requestAnimationFrame, reply) => {
         const { email, password, username } = request.body;
         const user = new User({ 
             email, 
